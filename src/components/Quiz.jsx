@@ -11,7 +11,11 @@ export default function Quiz() {
     <div id="question">
       <h2>{QUESTIONS[activeQuestionIndex].text}</h2>
       <ul id="answers">
-        {QUESTIONS[activeQuestionIndex].answers.map((answer, i) => <li key={i}>{answer}</li>)}
+        {QUESTIONS[activeQuestionIndex].answers.map((answer, i) => (
+          <li key={i} className="answer">
+            <button>{answer}</button>
+          </li>
+        ))}
       </ul>
     </div>
   );
