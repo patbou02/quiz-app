@@ -9,7 +9,7 @@ export default function Answers({ answers, selectedAnswer, answerState, onSelect
 
   return (
     <ul id="answers">
-      {answers.map((answer, i) => {
+      {shuffledAnswers.current.map((answer, i) => {
         const isSelected = selectedAnswer === answer;
         let cssClass = '';
 
